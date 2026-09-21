@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P V P Digital</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+}
+
+.header{
+    text-align:center;
+    padding:35px 10px;
+    background:#1d3b7a;
+}
+
+.header h1{
+    margin:0;
+    font-size:35px;
+}
+
+.header p{
+    font-size:18px;
+    color:#d9e2ff;
+}
+
+.container{
+    max-width:650px;
+    margin:auto;
+    padding:20px;
+}
+
+.box{
+    background:#151d35;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+}
+
+h2{
+    margin-top:0;
+}
+
+.package{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 10px;
+    border-bottom:1px solid #35415e;
+    font-size:17px;
+}
+
+.package:last-child{
+    border-bottom:0;
+}
+
+.payment{
+    background:#0c1326;
+    padding:15px;
+    margin-top:10px;
+    border-radius:10px;
+}
+
+.green{
+    color:#6df0aa;
+}
+
+label{
+    display:block;
+    margin-top:16px;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    border:0;
+    border-radius:8px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+textarea{
+    height:90px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:0;
+    border-radius:9px;
+    background:#287bea;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#preview{
+    width:100%;
+    margin-top:15px;
+    border-radius:10px;
+    display:none;
+}
+
+.success{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#123d29;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+.telegram{
+    display:block;
+    text-align:center;
+    background:#229ed9;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:9px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>P V P Digital</h1>
+    <p>Service Packages</p>
+</div>
+
+<div class="container">
+
+<!-- PACKAGE LIST -->
+
+<div class="box">
+
+<h2> Service Packages</h2>
+
+<div class="package">
+    <span>5,000 Ks</span>
+    <span>25,000 Ks</span>
+</div>
+
+<div class="package">
+    <span>10,000 Ks</span>
+    <span>50,000 Ks</span>
+</div>
+
+<div class="package">
+    <span>20,000 Ks</span>
+    <span>100,000 Ks</span>
+</div>
+
+<div class="package">
+    <span>30,000 Ks</span>
+    <span>200,000 Ks</span>
+</div>
+
+<div class="package">
+    <span>50,000 Ks</span>
+    <span>700,000 Ks</span>
+</div>
+
+<div class="package">
+    <span>100,000 Ks</span>
+    <span>1,200,000 Ks</span>
+</div>
+
+</div>
+
+
+<!-- PAYMENT -->
+
+<div class="box">
+
+<h2> ငွေလွှဲရန်</h2>
+
+<div class="payment">
+    <div class="green">KPay  ThaZinAung</div>
+    <b>09678656083</b>
+</div>
+
+<div class="payment">
+    <div class="green">Wave  နွယ်အေး</div>
+    <b>09668655420</b>
+</div>
+
+</div>
+
+
+<!-- ORDER FORM -->
+
+<div class="box">
+
+<h2> Order Form</h2>
+
+<label> အမည်</label>
+
+<input
+    type="text"
+    id="name"
+    placeholder="အမည်ထည့်ပါ"
+>
+
+
+<label> Package ရွေးပါ</label>
+
+<select id="package">
+
+<option value="">
+-- Package ရွေးပါ --
+</option>
+
+<option value="5,000 Ks  25,000 Ks">
+5,000 Ks  25,000 Ks
+</option>
+
+<option value="10,000 Ks  50,000 Ks">
+10,000 Ks  50,000 Ks
+</option>
+
+<option value="20,000 Ks  100,000 Ks">
+20,000 Ks  100,000 Ks
+</option>
+
+<option value="30,000 Ks  200,000 Ks">
+30,000 Ks  200,000 Ks
+</option>
+
+<option value="50,000 Ks  700,000 Ks">
+50,000 Ks  700,000 Ks
+</option>
+
+<option value="100,000 Ks  1,200,000 Ks">
+100,000 Ks  1,200,000 Ks
+</option>
+
+</select>
+
+
+<label> ငွေပြန်လက်ခံမည့် ဖုန်းနံပါတ်</label>
+
+<input
+    type="tel"
+    id="phone"
+    placeholder="09xxxxxxxxx"
+    maxlength="11"
+>
+
+
+<label> ငွေလွှဲပြေစာ နောက်ဆုံး ၅ လုံး</label>
+
+<input
+    type="text"
+    id="receipt"
+    placeholder="ဥပမာ 12345"
+    maxlength="5"
+>
+
+
+<label> ငွေလွှဲပြေစာပုံ</label>
+
+<input
+    type="file"
+    id="image"
+    accept="image/*"
+    onchange="showImage()"
+>
+
+<img id="preview">
+
+
+<label> မှတ်ချက်</label>
+
+<textarea
+    id="note"
+    placeholder="မှတ်ချက်ရှိပါက ရေးပါ"
+></textarea>
+
+
+<button onclick="submitOrder()">
+ Order တင်မည်
+</button>
+
+
+<div id="success" class="success"></div>
+
+</div>
+
+
+<!-- INFO -->
+
+<div class="box">
+
+<h2> အချက်အလက်</h2>
+
+<p>
+ငွေလွှဲပြီးပါက Package ရွေးချယ်ပြီး
+Order Form ကို ဖြည့်ပေးပါ။
+</p>
+
+<p>
+ လုပ်ဆောင်ချိန် 3-10 မိနစ်အထိ ကြာနိုင်ပါသည်။
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+<script>
+
+function showImage(){
+
+    var file =
+        document.getElementById("image").files[0];
+
+    var preview =
+        document.getElementById("preview");
+
+    if(file){
+
+        var reader =
+            new FileReader();
+
+        reader.onload =
+            function(e){
+
+                preview.src =
+                    e.target.result;
+
+                preview.style.display =
+                    "block";
+            };
+
+        reader.readAsDataURL(file);
+    }
+}
+
+
+function submitOrder(){
+
+    var name =
+        document.getElementById("name").value;
+
+    var packageName =
+        document.getElementById("package").value;
+
+    var phone =
+        document.getElementById("phone").value;
+
+    var receipt =
+        document.getElementById("receipt").value;
+
+    var image =
+        document.getElementById("image").files[0];
+
+    var note =
+        document.getElementById("note").value;
+
+    var result =
+        document.getElementById("success");
+
+
+    if(
+        name == "" ||
+        packageName == "" ||
+        phone == "" ||
+        receipt == "" ||
+        !image
+    ){
+
+        alert("အချက်အလက်အားလုံး ဖြည့်ပေးပါ။");
+
+        return;
+    }
+
+
+    if(receipt.length != 5){
+
+        alert("ပြေစာနောက်ဆုံး ၅ လုံးကို ထည့်ပေးပါ။");
+
+        return;
+    }
+
+
+    result.style.display =
+        "block";
+
+
+    result.innerHTML =
